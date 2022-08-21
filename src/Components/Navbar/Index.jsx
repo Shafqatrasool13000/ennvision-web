@@ -9,26 +9,29 @@ import profile from '../../assets/icons/ic_profile_placeholder.svg'
 function Index() {
     return (
         <StyledContainer>
-        <Navbar  expand="lg">
-            <Container fluid>
-                <NavLink  to="/">
-                    <img src={logo} alt="logo" />
-                </NavLink>
+        <Navbar expand="lg" fixed='top'>
+            <Container>
                 <Navbar.Toggle aria-controls="navbarScroll" />
+                <NavLink to="/">
+                <img src={logo} alt="logo" />
+                </NavLink>
+                <Navbar.Brand href="#" className='d-lg-none'>
+                <img src={profile} alt="profile" />
+                </Navbar.Brand>
                 <Navbar.Collapse id="navbarScroll">
-                    <Nav
-                        className="mx-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px' }}
-                        navbarScroll
-                    >
-                        <NavLink className='nav-link' to="/action1">FIND A HOME</NavLink>
-                        <NavLink className='nav-link' to="/action1">LIST A PROPERTY</NavLink>
-                        <NavLink className='nav-link' to="/action1">FIND A PROFESSIONAL</NavLink>
-                        <NavLink className='nav-link' to="/action1">RESOURCES</NavLink>
-                    </Nav>
+                <Nav
+                className="mx-auto my-2 my-lg-0"
+                style={{ maxHeight: '100px' }}
+                navbarScroll
+                >
+                <NavLink className='nav-link' to="/action1">FIND A HOME</NavLink>
+                <NavLink className='nav-link' to="/action1">LIST A PROPERTY</NavLink>
+                <NavLink className='nav-link' to="/action1">FIND A PROFESSIONAL</NavLink>
+                <NavLink className='nav-link' to="/action1">RESOURCES</NavLink>
+                </Nav>
                 </Navbar.Collapse>
-                <Navbar.Brand href="#">
-                    <img src={profile} alt="profile" />
+                <Navbar.Brand href="#" className='d-none d-lg-block'>
+                <img src={profile} alt="profile" />
                 </Navbar.Brand>
             </Container>
         </Navbar>
