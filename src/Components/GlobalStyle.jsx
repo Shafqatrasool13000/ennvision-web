@@ -15,6 +15,7 @@ export const tertiaryDark = '#1A1B1E';
 export const lightGrey = '#909090';
 export const lightGrey2 = '#EFEFF4';
 export const lightGrey3 = '#707070';
+export const lightGrey4 = '#D1D1D6';
 
 export const tertiaryGrey = '#808896';
 export const tertiaryGrey2 = '#80808F';
@@ -22,6 +23,8 @@ export const tertiaryGrey3 = '#B5B5C3';
 export const tertiaryGrey4 = '#AEAEB2';
 export const tertiaryGrey5 = '#E5E5EA';
 export const tertiaryGrey6 = '#D6D6E0';
+export const tertiaryGrey7 = '#232837';
+export const lightColor1='#F5F5F5'
 
 
 export const tertiaryGrewish = '#C6C6C8';

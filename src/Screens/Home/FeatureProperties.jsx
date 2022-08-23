@@ -13,6 +13,7 @@ import bathIcon from '../../assets/icons/ic_property_bath.svg';
 import areaIcon from '../../assets/icons/ic_property_area.svg';
 import { BlackDot, MiniHeading, SecondaryHeading, TertiraryHeadingMini, UnderlineRed } from '../../Components/GlobalStyle';
 import { Col, Row } from 'react-bootstrap';
+import ViewMore from '../../Components/ViewMoreProperties/Index';
 
 const propertiesData = [{
   title: '831 Maidstone Drive Bungalow', sub_title: 'L7A 0K5, Brampton, Ontario, Canada', propertyImg: property1,
@@ -88,10 +89,7 @@ const FeatureProperties = () => {
           }
         </Row>
       </div>
-      <div className="d-flex view-more">
-        <p className="view-more-text">VIEW MORE PROPERTIES</p>
-        <div className='view-more-line'/>
-      </div>
+    <ViewMore/>
 
     </FeaturePropertiesStyled>
   )

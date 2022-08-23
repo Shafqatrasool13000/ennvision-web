@@ -8,6 +8,7 @@ import property4 from '../../assets/Image/ic_property_4.png';
 import property5 from '../../assets/Image/ic_property_5.png';
 import property6 from '../../assets/Image/ic_property_6.png';
 import { Col, Container, Row } from 'react-bootstrap';
+import ViewMore from '../../Components/ViewMoreProperties/Index';
 
 // const professionalArea=[
 //   {img:{property1},title:}
@@ -70,9 +71,11 @@ const FindProfessional = () => {
           </div>
         </Col>
       </Row>
+      <ViewMore/>
         </div>
       
       </Container>
+     
     </FindProfessionalStyled>
   )
 }

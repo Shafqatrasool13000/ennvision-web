@@ -3,6 +3,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Home from './Screens/Home/Index';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 function App() {
 

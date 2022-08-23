@@ -1,7 +1,28 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { SecondaryHeading, TertiraryHeadingMini, UnderlineRed } from '../../Components/GlobalStyle'
-import { ProfessionalStyled } from './style'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { SecondaryHeading, TertiraryHeadingMini, UnderlineRed } from '../../Components/GlobalStyle';
+import { ProfessionalStyled } from './style';
+import professional1 from '../../assets/Image/ic_professional_1.png';
+import professional2 from '../../assets/Image/ic_professional_2.png';
+import professional3 from '../../assets/Image/ic_professional_3.png';
+import professional4 from '../../assets/Image/ic_professional_4.png';
+import { Col, Container, Row } from 'react-bootstrap';
+import ViewMore from '../../Components/ViewMoreProperties/Index';
+
+const professionalsData=[
+  {
+    name:"Mia Smith",profession:'Real Estate Agent',img:professional1
+  },
+   {
+    name:"Mia Smith",profession:'Real Estate Agent',img:professional2
+  }, 
+  {
+    name:"Mia Smith",profession:'Real Estate Agent',img:professional3
+  }, {
+    name:"Mia Smith",profession:'Real Estate Agent',img:professional4
+  },
+ 
+]
 
 const Professionals = () => {
   return (
@@ -11,34 +32,33 @@ const Professionals = () => {
       <div>
         <UnderlineRed />
         {/* <BlackDot/> */}
-        {/* <Link to="/properties" className="pxp-areas-1-item rounded-lg">
-                  <div
-                    className="pxp-areas-1-item-fig pxp-cover"
-                    style={{
-                      backgroundImage: `url(${
-                        data &&
-                        data.properties &&
-                        data.properties[0].imageList &&
-                        data.properties[0].imageList[0].imageURL
-                          ? data.properties[0].imageList[0].imageURL
-                          : 'assets/images/area-2.jpg'
-                      })`,
-                    }}
-                  />
-                  <div className="pxp-areas-1-item-details">
-                    <div className="pxp-areas-1-item-details-area">
-                      {data && data.cityName}
-                    </div>
-                    <div className="pxp-areas-1-item-details-area">
-                      <span>{data && data.propertyCount} Properties</span>
-                    </div>
-                    <div className="pxp-areas-1-item-details-city"></div>
-                  </div>
-                  <div className="pxp-areas-1-item-cta text-uppercase">
-                    Explore
-                  </div>
-                </Link> */}
-      </div>
+        </div>
+        <Container>  
+        <Row className='professionals justify-content-center'>
+          {
+            professionalsData.map(({name,profession,img})=>(
+        <Col sm={6} md={4} lg={3}>
+         <div className="professional-container" style={{
+          backgroundImage:`url(${img})`,
+          backgroundRepeat:'no-repeat',
+          position: 'relative',
+          height: '300px',
+          backgroundSize:'cover'
+         }}>
+          <div className="detail-text">
+          <h6 className="name">{name}</h6>
+          <p className="profession">{profession}</p>
+          </div>
+         </div>
+          </Col>
+
+            ))
+          }
+        <div className="load-more">
+      <ViewMore/>
+        </div>
+        </Row>
+        </Container>
     </ProfessionalStyled>
   )
 }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { lightDark, lightGrey3, PrimaryColor, pureDark, secondaryDark4, secondaryDark5, secondaryGrey, tertiaryGrewish, whiteColor } from "../../Components/GlobalStyle";
+import { lightColor1, lightDark, lightGrey3, lightGrey4, PrimaryColor, pureDark, secondaryDark4, secondaryDark5, secondaryGrey, tertiaryGrewish, tertiaryGrey7, whiteColor } from "../../Components/GlobalStyle";
 import banner from '../../assets/Image/ic_image_1.png'
 
 export const HomeStyled =styled.div`
@@ -9,6 +9,7 @@ bottom: 6%;
 right:5%;
 border-radius: 50%;
 cursor: pointer;
+z-index: 30;
 }
 `
 export const HeroSectionStyled=styled.div`
@@ -99,6 +100,7 @@ margin-top: 48px;
 .row{
 margin-top: 40px;
 font-size: 20px;
+border: 1px solid ${lightGrey4};
 .img-section{
 object-fit: cover;
 }
@@ -151,23 +153,7 @@ margin-bottom: 0;
 }
 }
 }
-.view-more{
-margin-top: 26px;
-&-text{
-color: ${PrimaryColor};
-font-size: 14px;
 
-}
-&-line{
-height: 3px;
-border-radius: 7px;
-background-color: ${PrimaryColor};
-width:  60px;
-margin-top: 10px;
-margin-left: 10px;
-opacity: 0.6;
-}
-}
 `
 export const WhyChooseUsStyled=styled.div`
 margin-top: 65px;
@@ -608,139 +594,121 @@ font-size: 26px;
 `
 export const ProfessionalStyled=styled.div`
 margin-top: 65px;
-.pxp-areas-1-item {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    height: 360px;
-    box-shadow: 0px 15px 30px rgba(0,0,0,0.10);
-    margin-bottom: 30px;
+.professionals{
+.professional-container{
+margin-top:46px;
+.detail-text{
+position: absolute;
+bottom: -28%;
+background: #FFFFFF;
+box-shadow: 0px 0px 15px #0000001C;
+border-radius: 6px;
+margin: 0 auto;
+text-align: center;
+padding: 9px 0;
+width: 100%;
+.name{
+font-size: 20px;
+color: ${pureDark};
+font-family: 'EnnVisionsMedium';
 }
-.pxp-areas-1-item-fig {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+.profession{
+font-size: 15px;
+color: ${pureDark};
 }
-.pxp-areas-1-item:hover .pxp-areas-1-item-fig {
-    transform: scale(1.06, 1.06);
 }
-.pxp-areas-1-item-details {
-    background-color: #fff;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 15px 20px;
-    z-index: 2;
 }
-.pxp-dark-mode .pxp-areas-1-item .pxp-areas-1-item-details {
-    background-color: #000;
+.load-more{
+margin-top: 90px;
 }
-.pxp-areas-1-item-details-area {
-    font-family: "Condensed", sans-serif;
-    color: #333;
-    font-size: 22px;
-   /* font-weight: 900; */
-   line-height: 24px;
 }
 
-.pxp-dark-mode .pxp-areas-1-item .pxp-areas-1-item-details-area {
-    
-    color: #fff;
+`
+export const WhoWeAreStyled=styled.div`
+margin-top: 80px;
+.inner-container{
+margin-top: 60px;
 }
-.pxp-areas-1-item-details-city {
-    color: #676767;
-    font-size: 14px;
-    font-family: "Condensed", sans-serif;
+`
+
+export const TestomonialStyled=styled.div`
+margin-top: 70px;
+.testomonial-inner{
+padding: 42px 0;
+background-color: #F5F5F5;
+&-cards{
+margin-top: 55px;
+.box{
+box-shadow: 0px 0px 11px #00000017;
+border-radius: 6px;
+padding: 14px;
+.profile-section{
+.name{
+font-size: 16px;
+font-family: 'EnnVisionsMedium';
+margin-top: 40px;
 }
-.pxp-dark-mode .pxp-areas-1-item .pxp-areas-1-item-details-city {
-    color: #fff;
 }
-.pxp-areas-1-item-counter {
-    position: absolute;
-    bottom: 110px;
-    left: 20px;
-    color: #333;
-   /* font-weight: 700; */
-    text-transform: uppercase;
-    padding: 6px 10px;
-    border-radius: 50px;
-    font-size: .6rem;
-    z-index: 3;
-    overflow: hidden;
-    transform: scale(0.0);
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+.detail-section{
+color: ${secondaryDark5};
+&-text{
+font-size: 16px;
 }
-.pxp-dark-mode .pxp-areas-1-item .pxp-areas-1-item-counter {
-    color: #fff;
+&-line{
+border-bottom: 1px solid ${secondaryDark5};
 }
-.pxp-areas-1-item:hover .pxp-areas-1-item-counter {
-    transform: scale(1, 1);
+.further-details{
+margin-top: 12px;
+.date{
+font-size: 14px;
 }
-.pxp-areas-1-item-counter:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fff;
-    border-radius: 50px;
-    transform: translateX(-72%);
-    -webkit-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
 }
-.pxp-dark-mode .pxp-areas-1-item .pxp-areas-1-item-counter:before {
-    background-color: #000;
 }
-.pxp-areas-1-item:hover .pxp-areas-1-item-counter:before {
-    transform: translateX(0);
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s;
 }
-.pxp-areas-1-item-counter > span {
-    opacity: 0;
-    z-index: 4;
-    position: relative;
-    -webkit-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
 }
-.pxp-areas-1-item:hover .pxp-areas-1-item-counter > span {
-    opacity: 1;
-    -webkit-transition-delay: 0.6s;
-    transition-delay: 0.6s;
 }
-.pxp-areas-1-item-cta {
-    position: absolute;
-    color: #000;
-    font-size: 14px;
-    bottom: 20px;
-    right: 20px;
-    font-family: "Condensed", sans-serif;
-    z-index: 3;
-    letter-spacing: 1px;
-    opacity: 0;
-   /* font-weight: 700; */
-    transform: translateY(400%);
-    -webkit-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
+`
+
+export const MembershipPlansStyled=styled.div`
+padding: 36px 0;
+.cards{
+margin-top: 72px;
+text-align: center;
+.card{
+border: none;
+.heading{
+color: ${tertiaryGrey7};
+font-size: 24px;
 }
-.pxp-dark-mode .pxp-areas-1-item .pxp-areas-1-item-cta {
-    color: #fff;
+.price{
+color: ${pureDark};
+font-size: 32px;
+margin-top: 12px;
+font-family: 'EnnVisionsMedium';
 }
-.pxp-areas-1-item:hover .pxp-areas-1-item-cta {
-    transform: translateY(0);
-    opacity: 1;
+.offers{
+.offer{
+margin-top: 22px;
+&-type{
+color: ${secondaryDark5};
+font-size: 16px;
+margin-left: 12px;
+}  
+}
+}
+.purchase-btn{
+margin: 0 auto;
+width: 80%;
+font-size: 16px;
+padding: 10px 0;
+margin-top: 40px;
+background-color:${lightColor1};
+color: ${tertiaryGrey7};
+&:hover{
+background-color: ${PrimaryColor};
+color: ${whiteColor};
+}
+}
+}
 }
 `

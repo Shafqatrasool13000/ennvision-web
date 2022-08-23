@@ -14,12 +14,12 @@ const ExploreProperty = () => {
      {/* <BlackDot/> */}
      </div>
      <Row className='align-items-center'>
-    <Col md={8}>
+    <Col md={7} className='p-0'>
         <div className="img-section">
             <img src={ic_image_2} alt="property" />
         </div>
     </Col>
-    <Col md={4}>
+    <Col md={5} className='mt-4 mt-md-none'>
         <TertiaryHeading>MPAC Autofill property</TertiaryHeading>
         <p className="sub-title">Power your search with our House Up real estate platform, for timely listings and a seamless experience</p> 
         <TertiaryHeading>Get MPAC Reports</TertiaryHeading>
