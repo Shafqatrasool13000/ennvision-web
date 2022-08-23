@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { SecondaryHeading, TertiraryHeadingMini, UnderlineRed } from '../../Components/GlobalStyle';
 import { ProfessionalStyled } from './style';
 import professional1 from '../../assets/Image/ic_professional_1.png';
@@ -36,22 +35,23 @@ const Professionals = () => {
         <Container>  
         <Row className='professionals justify-content-center'>
           {
-            professionalsData.map(({name,profession,img})=>(
+          professionalsData.map(({name,profession,img})=>(
         <Col sm={6} md={4} lg={3}>
          <div className="professional-container" style={{
           backgroundImage:`url(${img})`,
           backgroundRepeat:'no-repeat',
           position: 'relative',
           height: '300px',
-          backgroundSize:'cover'
+          backgroundSize:'cover',
+          zIndex:'-1'
          }}>
+         
+         </div>
           <div className="detail-text">
           <h6 className="name">{name}</h6>
           <p className="profession">{profession}</p>
           </div>
-         </div>
           </Col>
-
             ))
           }
         <div className="load-more">

@@ -4,15 +4,12 @@ import { FindProfessionalStyled } from './style';
 import property1 from '../../assets/Image/ic_property_1.png';
 import property2 from '../../assets/Image/ic_property_2.png';
 import property3 from '../../assets/Image/ic_property_3.png';
-import property4 from '../../assets/Image/ic_property_4.png';
-import property5 from '../../assets/Image/ic_property_5.png';
-import property6 from '../../assets/Image/ic_property_6.png';
+// import property4 from '../../assets/Image/ic_property_4.png';
+// import property5 from '../../assets/Image/ic_property_5.png';
+// import property6 from '../../assets/Image/ic_property_6.png';
 import { Col, Container, Row } from 'react-bootstrap';
 import ViewMore from '../../Components/ViewMoreProperties/Index';
 
-// const professionalArea=[
-//   {img:{property1},title:}
-// ]
 const FindProfessional = () => {
   return (
     <FindProfessionalStyled>
@@ -30,8 +27,8 @@ const FindProfessional = () => {
           </div>
           </div>
         </Col>
-        <Col>
-        <div className="area-container">
+        <Col md={4}>
+        <div className="area-container mt-3 mt-md-0">
           <img src={property2} alt="Avatar" className="image" />
           <div className="overlay">
             <div className="text text-small">Calgaty</div>
@@ -63,7 +60,7 @@ const FindProfessional = () => {
           </div>
         </Col>
         <Col md={8}>
-          <div className="area-container">
+          <div className="area-container mt-3 mt-md-0">
           <img src={property1} alt="Avatar" className="image" />
           <div className="overlay">
             <div className="text">Ottawa</div>
@@ -73,9 +70,7 @@ const FindProfessional = () => {
       </Row>
       <ViewMore/>
         </div>
-      
       </Container>
-     
     </FindProfessionalStyled>
   )
 }

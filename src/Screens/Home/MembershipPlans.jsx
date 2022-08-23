@@ -1,4 +1,5 @@
 import React from 'react';
+import AliceCarousel from 'react-alice-carousel';
 import { SecondaryHeading, TertiraryHeadingMini, UnderlineRed } from '../../Components/GlobalStyle';
 import { MembershipPlansStyled } from './style';
 import select from '../../assets/icons/ic_add_property_sel_payment.svg';
@@ -53,6 +54,30 @@ const membershipData = [{
     title: 'The quick, brown fox jumps over a lazy dog.'
   }]
 },]
+const responsive = {
+  0: { items: 1 },
+  568: { items: 2 },
+  1024: { items: 3 },
+};
+const items = [
+  ...membershipData.map(({plan_name,price,offers},index)=>(
+    <div className="card" key={index}>
+    <h6 className="heading">{plan_name}</h6>
+    <h5 className="price mb-0">{price}</h5>
+    <div className="offers">
+        {
+          offers.map(({title,selected})=>(
+            <div className="offer d-flex align-items-center justify-content-center">
+            <img src={select} alt="select" />
+            <p className='mb-0 offer-type'>{title}</p>
+          </div>
+          ))
+        }
+    </div>
+    <button className='purchase-btn'>PURCHASE</button>
+  </div>
+  ))
+]
 const MembershipPlans = () => {
   return (
     <MembershipPlansStyled>
@@ -63,27 +88,16 @@ const MembershipPlans = () => {
         {/* <BlackDot/> */}
       </div>
       <Container>
-        <Row className="cards">
-        {
-        membershipData.map(({plan_name,price,offers},index)=>(
-          <Col sm={6} md={4} className="card" key={index}>
-          <h6 className="heading">{plan_name}</h6>
-          <h5 className="price mb-0">{price}</h5>
-          <div className="offers">
-              {
-                offers.map(({title,selected})=>(
-                  <div className="offer d-flex align-items-center justify-content-center">
-                  <img src={select} alt="select" />
-                  <p className='mb-0 offer-type'>{title}</p>
-                </div>
-                ))
-              }
-          </div>
-          <button className='purchase-btn'>PURCHASE</button>
-        </Col>
-        ))
-      }
-        </Row>
+        <div className="cards">
+      <AliceCarousel
+        mouseTracking
+        items={items}
+        responsive={responsive}
+        disableDotsControls
+        disableButtonsControls
+        controlsStrategy="alternate"
+    />
+        </div>
       </Container>
     </MembershipPlansStyled>
   )

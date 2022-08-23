@@ -29,17 +29,17 @@ const HeroSection = () => {
                     <button className={`purchase-btns-rent w-50 ${apartment === 'Rent' ? "active" : ""}`} onClick={apartmentHandler}>RENT</button>
                     <button className={`purchase-btns-buy w-50 ${apartment === 'Rent' ? "" : "active"}`} onClick={apartmentHandler}>BUY</button>
                 </div>
-                <Row className="location-select-section d-flex justify-content-between p-3 align-items-center mx-2">
-                    <Col sm={6} className="location">
+                <Row className="location-select-section d-flex justify-content-sm-between justify-content-center p-3 align-items-center mx-2">
+                    <Col sm={6} className="location text-center text-sm-start">
                         <h5 className='title'>Location</h5>
                         <h6 className='sub-title'>City, Area, etc</h6>
                     </Col>
-                    <Col sm={6} className="property-type d-flex justify-content-between">
+                    <Col sm={6} className="property-type d-flex justify-content-sm-between justify-content-center mt-2 mt-sm-0">
                         <div className="left-section ps-4">
                             <h5 className='title'>Property Type</h5>
                             <h6 className='sub-title'>All Residentials</h6>
                         </div>
-                        <div className="search-box">
+                        <div className="search-box ms-2">
                             <img src={search_icon} alt="search" />
                         </div>
                     </Col>

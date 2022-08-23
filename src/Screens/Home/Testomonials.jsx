@@ -2,7 +2,7 @@ import React from 'react';
 import { SecondaryHeading, TertiraryHeadingMini, UnderlineRed } from '../../Components/GlobalStyle';
 import { TestomonialStyled } from './style';
 import testomonialImg1 from '../../assets/Image/ic_testimonials.png';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import AliceCarousel from 'react-alice-carousel';
 
 const testomonialsData=[
@@ -28,18 +28,17 @@ const testomonialsData=[
 ]
 const responsive = {
   0: { items: 1 },
-  568: { items: 2 },
-  1024: { items: 2 },
+  568: { items: 1 },
+  1024: { items: 1 },
 };
-const Testomonials = () => {
-  const items = [
+ const items = [
     ...testomonialsData.map(({name,date,description,img})=>(
       <Row className="box">
-      <Col md={3} className="profile-section">
+      <Col sm={3} className="profile-section">
         <img src={img}alt="testomonial" />
         <h6 className="name">{name}</h6>
       </Col>
-      <Col md={9} className="detail-section">
+      <Col sm={9} className="detail-section">
         <p className='detail-section-text'>{description}</p>
       <div className='detail-section-line'/>
      <div className="further-details d-flex justify-content-between">
@@ -50,6 +49,8 @@ const Testomonials = () => {
     </Row>
     ))
   ];
+const Testomonials = () => {
+ 
  
   return (
     <TestomonialStyled>
@@ -60,13 +61,15 @@ const Testomonials = () => {
         <UnderlineRed/>
         {/* <BlackDot/> */}
         </div>
-        <div className="testomonial-inner-cards">
+        <Container fluid className="testomonial-inner-cards">
         <AliceCarousel mouseTracking items={items} responsive={responsive} 
         disableButtonsControls
         disableDotsControls
+        // paddingLeft={100}
+        paddingRight={100}
 />
          
-        </div>
+        </Container>
 
       </div>
     </TestomonialStyled>

@@ -20,8 +20,8 @@ const Index = () => {
       </span>
       <HeroSection />
       <Container>
-        <ExploreProperty />
-        <FeatureProperties />
+      <ExploreProperty />
+      <FeatureProperties />
       </Container>
       <WhyChooseUs />
       <FindProfessional />

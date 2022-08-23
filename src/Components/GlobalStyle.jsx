@@ -24,6 +24,7 @@ export const tertiaryGrey4 = '#AEAEB2';
 export const tertiaryGrey5 = '#E5E5EA';
 export const tertiaryGrey6 = '#D6D6E0';
 export const tertiaryGrey7 = '#232837';
+export const tertiaryGrey8 = '#FCFBFB';
 export const lightColor1='#F5F5F5'
 
 

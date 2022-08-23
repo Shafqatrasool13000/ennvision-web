@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { lightColor1, lightDark, lightGrey3, lightGrey4, PrimaryColor, pureDark, secondaryDark4, secondaryDark5, secondaryGrey, tertiaryGrewish, tertiaryGrey7, whiteColor } from "../../Components/GlobalStyle";
+import { lightColor1, lightDark, lightGrey3, lightGrey4, PrimaryColor, pureDark, secondaryDark4, secondaryDark5, secondaryGrey, tertiaryGrewish, tertiaryGrey7, tertiaryGrey8, whiteColor } from "../../Components/GlobalStyle";
 import banner from '../../assets/Image/ic_image_1.png'
 
 export const HomeStyled =styled.div`
@@ -16,7 +16,7 @@ export const HeroSectionStyled=styled.div`
 background: url(${banner});
 background-repeat: no-repeat;
 background-size: cover;
-height: 100vh;
+height: 82vh;
 .inner-container{
 height: 100vh;
 &-main-heading{
@@ -51,7 +51,6 @@ color: ${whiteColor};
 button{
 background: transparent;
 font-size: 18px;
-
 }
 }
 .location-select-section{
@@ -76,8 +75,18 @@ height: 70%;
 background-color: ${PrimaryColor};
 border-radius: 4px;
 padding: 12px;
+
 img{
 vertical-align: super;
+}
+}
+@media screen and (max-width:575px){
+border-left: none;
+.search-box{
+img{
+height:20px
+}
+height:40px
 }
 }
 }
@@ -170,18 +179,12 @@ font-size: 18px;
 color: ${secondaryDark5};
 
 }
-/* .pxp-section-h2{
-color: ${pureDark};
-font-size: 22px;
 }
-.pxp-text-light{
-font-size: 16px;
-color: ${secondaryDark4};
-} */
+.cards{
+box-shadow: 0px 0px 21px #00000029;
 }
 .pxp-services-container {
 height: 300px;
-box-shadow: 0px 15px 30px rgba(0,0,0,0.10);
 display: -webkit-box;
 display: -ms-flexbox;
 display: flex;
@@ -596,10 +599,11 @@ export const ProfessionalStyled=styled.div`
 margin-top: 65px;
 .professionals{
 .professional-container{
-margin-top:46px;
+margin-top:42px;
+
+}
 .detail-text{
-position: absolute;
-bottom: -28%;
+margin-top:-20px;
 background: #FFFFFF;
 box-shadow: 0px 0px 15px #0000001C;
 border-radius: 6px;
@@ -607,6 +611,7 @@ margin: 0 auto;
 text-align: center;
 padding: 9px 0;
 width: 100%;
+z-index: 30;
 .name{
 font-size: 20px;
 color: ${pureDark};
@@ -617,9 +622,8 @@ font-size: 15px;
 color: ${pureDark};
 }
 }
-}
 .load-more{
-margin-top: 90px;
+margin-top: 10px;
 }
 }
 
@@ -641,7 +645,9 @@ margin-top: 55px;
 .box{
 box-shadow: 0px 0px 11px #00000017;
 border-radius: 6px;
-padding: 14px;
+padding: 20px;
+margin-right: 25px;
+background: ${tertiaryGrey8};
 .profile-section{
 .name{
 font-size: 16px;
