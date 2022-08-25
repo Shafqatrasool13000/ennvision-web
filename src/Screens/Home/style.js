@@ -1,22 +1,17 @@
 import styled from "styled-components";
-import { lightColor1, lightDark, lightGrey3, lightGrey4, PrimaryColor, pureDark, secondaryDark4, secondaryDark5, secondaryGrey, tertiaryGrewish, tertiaryGrey7, tertiaryGrey8, whiteColor } from "../../Components/GlobalStyle";
+import { lightColor1, lightDark, lightGrey3, lightGrey4, PrimaryColor, pureDark, secondaryDark4, secondaryDark5, tertiaryGrewish, tertiaryGrey7, tertiaryGrey8, whiteColor } from "../../Components/GlobalStyle";
 import banner from '../../assets/Image/ic_image_1.png'
 
-export const HomeStyled =styled.div`
-.arrow-box{
-position: fixed;
-bottom: 6%;
-right:5%;
-border-radius: 50%;
-cursor: pointer;
-z-index: 30;
-}
-`
 export const HeroSectionStyled=styled.div`
 background: url(${banner});
 background-repeat: no-repeat;
 background-size: cover;
+position: relative;
 height: 82vh;
+width: 100%;
+.footer{
+bottom: 10%;
+}
 .inner-container{
 height: 100vh;
 &-main-heading{
@@ -91,16 +86,8 @@ height:40px
 }
 }
 }
-.hero-footer{
-background-color: ${whiteColor};
-margin-top: 70px;
-}
-.icon{
-cursor: pointer;
-&:not(:first-child){
-margin-left: 12px;
-}
-}
+
+
 }
 `
 export const ExplorePropertyStyled=styled.div`
@@ -122,6 +109,8 @@ font-size: 16px;
 `
 export const FeaturePropertiesStyled=styled.div`
 margin-top: 55px;
+`
+export const PropertiesStyled=styled.div`
 .properties{
 margin-top: 10px;
 .card{
@@ -138,10 +127,14 @@ border-bottom: 1px solid ${tertiaryGrewish};
 padding-bottom: 5px;
 .btn-primary{
 color: ${PrimaryColor};
-font-size: 14px;
 background-color: rgba(199, 17, 43, 0.12);
+font-size: 14px;
 border-radius: 3px;
 border:none;
+&:hover{
+color: ${whiteColor};
+background-color: ${PrimaryColor};
+}
 }
 .price{
 font-size: 18px;
@@ -162,7 +155,6 @@ margin-bottom: 0;
 }
 }
 }
-
 `
 export const WhyChooseUsStyled=styled.div`
 margin-top: 65px;
@@ -634,7 +626,6 @@ margin-top: 80px;
 margin-top: 60px;
 }
 `
-
 export const TestomonialStyled=styled.div`
 margin-top: 70px;
 .testomonial-inner{
@@ -674,7 +665,6 @@ font-size: 14px;
 }
 }
 `
-
 export const MembershipPlansStyled=styled.div`
 padding: 36px 0;
 .cards{

@@ -67,10 +67,8 @@ const Testomonials = () => {
         disableDotsControls
         // paddingLeft={100}
         paddingRight={100}
-/>
-         
+        />
         </Container>
-
       </div>
     </TestomonialStyled>
   )

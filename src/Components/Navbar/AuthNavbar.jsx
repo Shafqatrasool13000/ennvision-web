@@ -3,17 +3,17 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
-import { StyledContainer } from './style';
-import logo from '../../assets/icons/ic_logo2.svg';
-import profile from '../../assets/icons/ic_profile_placeholder.svg';
+import { StyledAuthContainer} from './style';
+import logo from '../../assets/icons/ic_add_property_payment_wallet.svg';
+import profile from '../../assets/icons/ic_profile_placeholder.svg'
 function Index() {
     return (
-        <StyledContainer>
+        <StyledAuthContainer>
         <Navbar expand="lg" fixed='top'>
             <Container>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <NavLink to="/">
-                <img src={logo} alt="logo" />
+                <img className='logo' src={logo} alt="logo" />
                 </NavLink>
                 <Navbar.Brand href="#" className='d-lg-none'>
                 <img src={profile} alt="profile" />
@@ -34,7 +34,7 @@ function Index() {
                 </Navbar.Brand>
             </Container>
         </Navbar>
-        </StyledContainer>
+        </StyledAuthContainer>
     );
 }
 
