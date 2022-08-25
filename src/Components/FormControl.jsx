@@ -12,7 +12,7 @@ import CustomMultiSelect from './CustomMultiSelect/Index';
 import CustomLargeInput  from "./CustomLargeInput/Index";
 import CustomLargeSelect  from "./CustomLargeSelect/Index";
 
-const Formickcontroller = (props) => {
+const FormikController = (props) => {
   const { control, ...rest } = props;
   switch (control) {
     case "input":
@@ -46,4 +46,4 @@ const Formickcontroller = (props) => {
   }
 };
 
-export default Formickcontroller;
+export default FormikController;

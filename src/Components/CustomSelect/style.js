@@ -1,49 +1,28 @@
 import styled from "styled-components";
+import { tertiaryGrey7 } from "../GlobalStyle";
 
 
 export const CustomSelectContainer = styled.div`
 margin-bottom: 10px;
 width: 100%;
 
-/* 
-  .custom-select-inner{
-    position: relative;
-
-  }
-
-  .custom-select-inner::after {
-  content: '>';
-  transform: rotate(90deg);
-  font-size: 1.5rem;
-  top: 6px;
-  right: 15px;
-  position: absolute;
-} */
-
-
   label {
-    font-size: 13px;
-    text-transform: capitalize;
-    display: block;
-    margin-bottom: 10px;
+  font-size: 13px;
+  text-transform: capitalize;
+  display: block;
+  margin-bottom: 10px;
   }
   .ant-select-arrow{
   color: #000000;
   }
+  .ant-select-selection-placeholder{
+  color: ${tertiaryGrey7};
+  }
 
   .ant-select{
-      background: white;
-      border: 0.5px solid #D6D6E0;
-      border-radius: 3px;
-      /* height: 48px; */
-      padding: 4px;
-      width: 100%;
-    }
-    .ant-select-selector{
-      /* height: 47px !important; */
-        /* border: none !important;   
-        padding: 8px !important;
-        height: 47px !important;
-       margin-bottom: 15px;  */
-    } 
+  background: white;
+  border: 0.5px solid #D6D6E0;
+  border-radius: 3px;
+  width: 100%;
+  }
 `;

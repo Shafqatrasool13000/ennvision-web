@@ -38,7 +38,7 @@ const propertiesData = [{
 const Properties = () => {
   return (
     <PropertiesStyled>
-      <div className="properties">
+      <div className="properties pb-5">
         <Row>
           {
             propertiesData.map(({ sub_title, area, bath, propertyImg, bed, title },index) => (
