@@ -118,6 +118,7 @@ box-shadow: 0px 0px 20px #00000012;
 border-radius: 3px;
 margin-top: 30px;
 border: none;
+cursor: pointer;
 .sub-title{
 color: ${lightDark};
 font-size: 14px;

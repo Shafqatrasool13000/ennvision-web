@@ -14,6 +14,7 @@ import {MiniHeading} from '../../Components/GlobalStyle';
 import { Col, Row } from 'react-bootstrap';
 import ViewMore from '../../Components/ViewMoreProperties/Index';
 import { PropertiesStyled } from './style';
+import { useNavigate } from 'react-router-dom';
 
 const propertiesData = [{
   title: '831 Maidstone Drive Bungalow', sub_title: 'L7A 0K5, Brampton, Ontario, Canada', propertyImg: property1,
@@ -36,6 +37,11 @@ const propertiesData = [{
 }]
 
 const Properties = () => {
+  const navigate=useNavigate();
+
+  const navigateToDetails=(id)=>{
+    navigate(`/property-details/${id}`)
+  }
   return (
     <PropertiesStyled>
       <div className="properties pb-5">
@@ -43,7 +49,7 @@ const Properties = () => {
           {
             propertiesData.map(({ sub_title, area, bath, propertyImg, bed, title },index) => (
               <Col key={index} md={4}>
-                <Card>
+                <Card onClick={()=>navigateToDetails(index)}>
                   <Card.Img variant="top" src={propertyImg} />
                   <Card.Body>
                     <MiniHeading>{title}</MiniHeading>

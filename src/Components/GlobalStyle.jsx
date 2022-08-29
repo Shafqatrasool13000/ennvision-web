@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const BasicColor = '#C0922E';
 export const PrimaryColor = '#C7112B';
+export const greenishColor='#34C759';
 export const whiteColor = '#FFFFFF'
 export const pureDark = '#000000';
 export const lightDark = '#4D4D4D';
@@ -16,6 +17,7 @@ export const lightGrey = '#909090';
 export const lightGrey2 = '#EFEFF4';
 export const lightGrey3 = '#707070';
 export const lightGrey4 = '#D1D1D6';
+export const lightGrey5 = '#E9E9E9';
 
 export const tertiaryGrey = '#808896';
 export const tertiaryGrey2 = '#80808F';
@@ -67,14 +69,24 @@ font-size: 12px;
 letter-spacing: 1px;
 margin-top: 5px;
 `
+
+
 export const SecondaryHeading = styled.h5`color: ${pureDark};
 font-family: 'EnnVisionsMedium';
 font-size: 40px;
+`
+export const SecondaryHeadingMini = styled.h5`color: ${pureDark};
+font-family: 'EnnVisionsMedium';
+font-size: 31px;
 `
 export const TertiraryHeading = styled.h6`
 color: ${pureDark};
 font-size: 20px;
 font-family: 'EnnVisionsMedium';
+`
+export const TertiraryHeading1 = styled.h6`
+color: ${lightDark};
+font-size: 20px;
 `
 export const TertiraryHeadingMini = styled.h6`
 color: ${secondaryDark5};

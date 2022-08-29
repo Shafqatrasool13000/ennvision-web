@@ -6,6 +6,7 @@ import { ToastContainer } from "react-toastify";
 import Home from './Screens/Home/Index';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import FindHome from "./Screens/FindHome/Index";
+import PropertyDetails from "./Screens/PropertyDetails/Index";
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Home  />} />
       <Route path="/find-home" element={<FindHome />} />
+      <Route path="/property-details/:id" element={<PropertyDetails />} />
       <Route path="*" element={<h3>Page not Found</h3>} />
       </Routes>
     </>
