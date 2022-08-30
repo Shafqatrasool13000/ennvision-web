@@ -25,7 +25,7 @@ function Index() {
                 >
                 <NavLink className='nav-link' to="/find-home">FIND A HOME</NavLink>
                 <NavLink className='nav-link' to="/action1">LIST A PROPERTY</NavLink>
-                <NavLink className='nav-link' to="/action1">FIND A PROFESSIONAL</NavLink>
+                <NavLink className='nav-link' to="/find-professionals">FIND A PROFESSIONAL</NavLink>
                 <NavLink className='nav-link' to="/action1">RESOURCES</NavLink>
                 </Nav>
                 </Navbar.Collapse>

@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroSection from './HeroSection'
+import HeroSection from '../../Components/HeroSection/Index';
 import ExploreProperty from './ExploreProperty';
 import FeatureProperties from './FeatureProperties';
 import { Container } from 'react-bootstrap';

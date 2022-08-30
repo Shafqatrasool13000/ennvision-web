@@ -18,6 +18,7 @@ export const lightGrey2 = '#EFEFF4';
 export const lightGrey3 = '#707070';
 export const lightGrey4 = '#D1D1D6';
 export const lightGrey5 = '#E9E9E9';
+export const lightGrey6 = '#717272';
 
 export const tertiaryGrey = '#808896';
 export const tertiaryGrey2 = '#80808F';

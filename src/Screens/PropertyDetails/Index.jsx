@@ -15,11 +15,13 @@ import statusIcon from '../../assets/icons/ic_property_detail_features.svg';
 import profileImg from '../../assets/Property Details/Owner.png';
 import soldPropertyIcon from '../../assets/icons/ic_professional_post.svg';
 import availabeBuildingIcon from '../../assets/icons/ic_property_detail_sold.svg';
+import redTickIcon from '../../assets/icons/ic_select_red.svg';
+import lightTickIcon from '../../assets/icons/ic_property_detail_status.svg';
 
 const propertyDetailsData = [
     {
         name: 'Bedrooms', img: bedroomIcon, quantity: '4'
-    },{
+    }, {
         name: 'Bathrooms', img: bathIcon, quantity: '2'
     }, {
         name: 'Square Area', img: areaIcon, quantity: '8x10 m²'
@@ -29,6 +31,27 @@ const propertyDetailsData = [
         name: 'Status', img: statusIcon, quantity: 'Available'
     },
 ]
+const keyFeaturesData =[
+    '10 bedrooms',
+    '12 washrooms', 
+    'TV lounge', 
+    '3 Drawing and Dining rooms', 
+    '3 Storerooms', 
+    '3 Kitchens', 
+    '5 Servant Rooms',
+    'Parking Space'
+];
+const featuresData=[
+    'Central Heating','Central Cooling','Servant Quarter','Tv Lounge','Lawn','Dirty Kitchen','Dining Room','Swimming Pool','Elevators','Drawing Room','Fully Furnished','Study Room','Home Theatre','Semi Furnished','Powder Room','Corner House','Wifi','Security Staff','Kitchen','Balcony','Accessible For Specially-Abled Persons','Store Room','Laundry Room','Nearby Landmark'
+]
+
+const facingData=[
+'North','North West','West','North East','South West','South','South East','West'
+]
+
+const utilitiesData=[
+    'Electricity','Gas','Maintenance','Water'
+]
 
 const Index = () => {
     return (
@@ -36,20 +59,20 @@ const Index = () => {
             <Navbar />
             <PropertyDetailsStyled>
                 <Container>
-                    <div className="d-flex justify-content-between">
+                    <div className="d-flex justify-content-between align-items-center">
                         <SecondaryHeadingMini>Sensational And Brilliant Bungalow In Calgary!</SecondaryHeadingMini>
-                        <h5>For Sale</h5>
+                        <h5 className='for-sale'>For Sale</h5>
                     </div>
-                    <div className="d-flex justify-content-between">
-                        <TertiraryHeading1>83 Woodford Crescent Southwest, Calgary, Alberta, Canada</TertiraryHeading1>
-                        <h4>$746,000.00</h4>
+                    <div className="d-flex justify-content-between align-items-center">
+                        <TertiraryHeading1 className='mt-2'>83 Woodford Crescent Southwest, Calgary, Alberta, Canada</TertiraryHeading1>
+                        <h4 className='property-price'>$746,000.00</h4>
                     </div>
                     <div className="imgs-gallery">
                         <Row>
-                            <Col md={8}>
+                            <Col sm={6} lg={8}>
                                 <img src={propertPic1} alt="peroperty-pic" className='img-large' />
                             </Col>
-                            <Col md={4}>
+                            <Col sm={6} lg={4}>
                                 <img src={propertPic2} alt="property2" />
                                 <img src={propertPic3} alt="property3" />
                             </Col>
@@ -71,106 +94,124 @@ const Index = () => {
                         }
                     </div>
                     <div className="owner-details">
-                     <p className="listed-by">Listed by Property owner</p>
-                     <Row>
-                        <Col md={8}>
-                            <div className="d-flex">
-                                <img src={profileImg} alt="profile" className="profile-img" />
-                                <div className="bio ms-3">
-                                    <h6>Denzel Washington</h6>
-                                     <p className="branch mt-3">Denzel Capital Properties LLC</p>
-                                    <p className="location">Calgary, Alberta, Canada</p>
+                        <p className="listed-by text-center text-md-start">Listed by Property owner</p>
+                        <Row>
+                            <Col md={6} lg={8}>
+                                <div className="d-flex">
+                                    <img src={profileImg} alt="profile" className="profile-img" />
+                                    <div className="bio ms-3">
+                                        <h6>Denzel Washington</h6>
+                                        <p className="branch mt-3">Denzel Capital Properties LLC</p>
+                                        <p className="location">Calgary, Alberta, Canada</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </Col>
-                        <Col md={4}>
-                            <div className="sold-properties">
-                                <Row>
-                                    <Col md={6}>
-                                    <p className="title">Sold Properties    </p>
-                                        <div className="properties d-flex">
-                                           <span>
-                                            <img src={soldPropertyIcon} alt="" />
-                                            </span> 
-                                            <p className="quantity ms-2">47</p>
-                                        </div>
-                                        
-                                        <button className='chat-btn w-100'> <span><img src="" alt="" /></span> Start Chat</button>
-                                        
-                                       
-                                    </Col>
-                                    <Col md={6}>
-                                        <p className="title">Available Properties</p>
-                                        <div className="properties d-flex">
-                                        <span>
-                                            <img src={availabeBuildingIcon} alt="building" />
-                                            </span> 
-                                            <p className="quantity ms-2">22</p>
-                                        </div>
-                                        <button className='call-btn w-100'><span><img src="" alt="" /></span> Call Now</button>
-                                        
-                                    </Col>
-                                </Row>
-                            </div>
-                        </Col>
-                     </Row>
-                    </div>
-                    {/* <div className="about-property">
-                    <div className="about">
-                        <h6 className="title">About this property</h6>
-                        <div className="posted-at">
-                            <p className="posted">Posted on</p>
-                            <p className="date"> - June 29, 2022</p>
-                        </div>
-                        <p className="area">4500 Sq. Ft. House for Sale in Calgary!</p>
-                        <p className="details">A grand 2400 sq. ft. house for sale in E-11/3, Islamabad. It comprises of 10 bedrooms, 12 washrooms, TV lounge, 3 drawing & dining rooms, store room, servant quarters and car parking space. Key lifestyle and convenience around this property includes beautiful parks, commercial area, Restaurants and food outlets, medical care/ hospital, gym, health/sports centre within 1-2 KMs. Margalla Road can be used for daily commute.</p>
-                    </div>
-                    <div className="key-features">
-                        <p className="title">Key features:</p>
-                        <div className="details">
-                            <div className="d-flex feature">
-                                <img src="" alt="" />
-                                <p>10 bedrooms </p>
-                            </div>
-                        </div>
-                    </div>   
-                     <div className="features">
-                        <p className="title">Features</p>
-                        <Row>
-                            <Col md={4}>
-
-                            </Col><Col md={4}>
-                                
-                            </Col><Col md={4}>
-                                
                             </Col>
+                            <Col md={6} lg={4} className='mt-3 mt-md-0'>
+                                <div className="sold-properties">
+                                    <Row>
+                                        <Col md={6}>
+                                            <p className="title text-center text-md-start">Sold Properties    </p>
+                                            <div className="properties d-flex align-items-center justify-content-center justify-content-md-start">
+                                                <span>
+                                                    <img src={soldPropertyIcon} alt="" />
+                                                </span>
+                                                <p className="quantity ms-2 mb-0">47</p>
+                                            </div>
+                                            <div className="d-flex justify-content-center mt-3">
+                                            <button className='chat-btn'> <span><img src="" alt="" /></span> Start Chat</button>
+                                            </div>
+                                        </Col>
+                                        <Col md={6} className='mt-3 mt-md-0'>
+                                            <p className="title text-center text-md-start">Available Properties</p>
+                                            <div className="properties d-flex align-items-center justify-content-center justify-content-md-start">
+                                                <span>
+                                                    <img src={availabeBuildingIcon} alt="building" />
+                                                </span>
+                                                <p className="quantity ms-2 mb-0">22</p>
+                                            </div>
+                                            <div className="d-flex justify-content-center mt-3">
+                                            <button className='call-btn'><span><img src="" alt="" /></span> Call Now</button>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                </div>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div className="about-property">
+                        <div className="about-property-main-details">
+                            <h6 className="about-property-main-details-title">About this property</h6>
+                            <div className="posted-at d-flex">
+                                <p className="posted-at-text">Posted on</p>
+                                <p className="posted-at-date ms-2"> - June 29, 2022</p>
+                            </div>
+                            <p className="posted-at-area">4500 Sq. Ft. House for Sale in Calgary!</p>
+                            <p className="posted-at-detail-text">A grand 2400 sq. ft. house for sale in E-11/3, Islamabad. It comprises of 10 bedrooms, 12 washrooms, TV lounge, 3 drawing & dining rooms, store room, servant quarters and car parking space. Key lifestyle and convenience around this property includes beautiful parks, commercial area, Restaurants and food outlets, medical care/ hospital, gym, health/sports centre within 1-2 KMs. Margalla Road can be used for daily commute.</p>
+                        </div>
+                        <div className="key-features">
+                            <p className="key-features-title">Key features:</p>
+                            <div className="details">
+                                {
+                                keyFeaturesData.map((title,index)=>(
+                                    <div key={index} className="d-flex feature mt-3">
+                                    <img src={redTickIcon} alt="check-icon" />
+                                    <p className='text ms-2 mb-0'>{title}</p>
+                                </div>
+                                ))
+                                }
+                               
+                            </div>
+                        </div>
+                        <div className="features-container pb-3">
+                            <p className="features-container-title mb-0">Features</p>
+                            <Row>
+                                {
+                                    featuresData.map((title,index)=>(
+                                        <Col key={index} sm={6} md={4}>
+                                        <div className="feature d-flex align-items-center">
+                                            <span><img src={lightTickIcon} alt="check-icon" /></span>
+                                            <p className="feature-text mb-0 ms-2">{title}</p>
+                                        </div>
+        
+                                        </Col>
+                                    ))
+                                }
+                              
                             </Row>
+                        </div>
+                        <div className="features-container pb-3">
+                            <p className="features-container-title mb-0">Utilities</p>
+                            <Row>
+                                {
+                                    utilitiesData.map((title,index)=>(
+                                        <Col key={index} sm={6} md={4}>
+                                        <div className="feature d-flex align-items-center">
+                                            <span><img src={lightTickIcon} alt="check-icon" /></span>
+                                            <p className="feature-text mb-0 ms-2">{title}</p>
+                                        </div>
+                                        </Col>
+                                    ))
+                                }
+                            </Row>
+                        </div>
+                        <div className="features-container pb-3">
+                            <p className="features-container-title mb-0">Facing</p>
+                            <Row>
+                                {
+                                    facingData.map((title,index)=>(
+                                        <Col key={index} sm={6} md={4}>
+                                        <div className="feature d-flex align-items-center">
+                                            <span><img src={lightTickIcon} alt="check-icon" /></span>
+                                            <p className="feature-text mb-0 ms-2">{title}</p>
+                                        </div>
+        
+                                        </Col>
+                                    ))
+                                }
+                              
+                            </Row>
+                        </div>
                     </div>
-                    <div className="utilities">
-                        <p className="title">Features</p>
-                        <Row>
-                            <Col md={4}>
-
-                            </Col><Col md={4}>
-                                
-                            </Col><Col md={4}>
-                                
-                            </Col>
-                        </Row>
-                    </div>
-                    <div className="facing">
-                        <p className="title">Facing</p>
-                        <Row>
-                            <Col md={4}>
-
-                            </Col><Col md={4}>
-                                
-                            </Col><Col md={4}>
-                                
-                            </Col>
-                        </Row>
-                    </div>
-                    </div> */}
                     <div className="location-map"></div>
                 </Container>
                 <SocialFooter />
