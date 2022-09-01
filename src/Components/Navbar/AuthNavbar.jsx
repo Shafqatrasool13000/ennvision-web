@@ -24,9 +24,9 @@ function Index() {
                 navbarScroll
                 >
                 <NavLink className='nav-link' to="/find-home">FIND A HOME</NavLink>
-                <NavLink className='nav-link' to="/action1">LIST A PROPERTY</NavLink>
+                <NavLink className='nav-link' to="/list-properties">LIST A PROPERTY</NavLink>
                 <NavLink className='nav-link' to="/find-professionals">FIND A PROFESSIONAL</NavLink>
-                <NavLink className='nav-link' to="/action1">RESOURCES</NavLink>
+                <NavLink className='nav-link' to="/resources">RESOURCES</NavLink>
                 </Nav>
                 </Navbar.Collapse>
                 <Navbar.Brand href="#" className='d-none d-lg-block'>

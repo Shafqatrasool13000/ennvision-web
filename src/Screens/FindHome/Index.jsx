@@ -5,9 +5,14 @@ import Properties from '../Home/Properties';
 import { Container } from 'react-bootstrap';
 import SocialFooter from '../../Components/SocialFooter/SocialFooter';
 import Filters from './Filters';
+import { Helmet } from 'react-helmet';
 
 const Index = () => {
   return (
+    <>
+     <Helmet>
+    <title>Find Home</title>
+    </Helmet>
     <FindHomeStyled>
     <AuthNavbar/>
     <SocialFooter/>
@@ -20,6 +25,7 @@ const Index = () => {
     <Properties/>
     </Container>
     </FindHomeStyled>
+      </>
   )
 }
 
