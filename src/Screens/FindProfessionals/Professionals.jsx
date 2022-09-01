@@ -8,26 +8,26 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 const professionalsData=[
   {
-    name:"Mia Smith",profession:'Real Estate Agent',img:professional1
+    name:"Sandra Bullock",profession:'Bathroom Renovation',img:professional1
   },
    {
-    name:"Mia Smith",profession:'Real Estate Agent',img:professional2
+    name:"Jodie Foster",profession:'Carpet Cleaners',img:professional2
   }, 
   {
-    name:"Mia Smith",profession:'Real Estate Agent',img:professional3
+    name:"Betty White",profession:'Driveway Sealing',img:professional3
   }, {
-    name:"Mia Smith",profession:'Real Estate Agent',img:professional4
+    name:"Morgan Freeman",profession:'Drone Photography',img:professional4
   },
   {
-    name:"Mia Smith",profession:'Real Estate Agent',img:professional1
+    name:"Emma Stone",profession:'Hardwood/laminate Flooring',img:professional1
   },
    {
-    name:"Mia Smith",profession:'Real Estate Agent',img:professional2
+    name:"Tom Hanks",profession:'Handyman',img:professional2
   }, 
   {
-    name:"Mia Smith",profession:'Real Estate Agent',img:professional3
+    name:"Emma Stone",profession:'Home Inspection',img:professional3
   }, {
-    name:"Mia Smith",profession:'Real Estate Agent',img:professional4
+    name:"Will Smith",profession:'House Cleaners',img:professional4
   }
  
 ]
