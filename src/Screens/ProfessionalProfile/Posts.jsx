@@ -1,4 +1,5 @@
 import { Card, Col, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import post1 from '../../assets/Property/Property (1).png';
 import post2 from '../../assets/Property/Property (2).png';
 import post3 from '../../assets/Property/Property (3).png';
@@ -10,6 +11,7 @@ import post8 from '../../assets/Property/Property (8).png';
 import { PostsStyled } from './style';
 
 const PostList = () => {
+  const navigate=useNavigate();
 
  
   return (
@@ -17,8 +19,8 @@ const PostList = () => {
     <Row>
       {
      [post1,post2,post3,post4,post5,post6,post7,post8].map((img,index)=>(
-      <Col  key={index} lg={3} md={4} sm={2} >
-      <Card>
+      <Col key={index} lg={3} md={4} sm={2} >
+      <Card onClick={()=>navigate(`/post-details/${index}`)}>
       <Card.Img variant="top" src={img} className='position-relative' alt={img} />
       <Card.Body  className='position-absolute bottom-0'>
         <Card.Title>831 Maidstone Drive Bungalow</Card.Title>

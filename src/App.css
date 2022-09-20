@@ -13,15 +13,9 @@ p,h1,h2,h3,h4,h5,h6{
   margin: 0;
 }
 
-
-html{
-  font-family: 'EnnVisions' !important;
-}
-
 body{
   font-family: "EnnVisions" !important;
   background-color: #EEF0F8 !important;
-  height: 100vh;
 }
 .arrow-box{
   position: fixed;

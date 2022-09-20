@@ -26,6 +26,8 @@ import Confirmaton from './Screens/Confirmation/Index';
 import VerifyOtp from './Screens/VerifyOtp/Index';
 import ProfessionalProfile from './Screens/ProfessionalProfile/Index';
 import BecomePro2 from './Screens/BecomeProfessional/BecomePro';
+import PostDetails from "./Screens/PostDetails/Index";
+import PaymentInfo from './Screens/BillSummary/Index'
 
 export const SidebarContext = createContext();
 
@@ -75,12 +77,14 @@ function App() {
           <Route path="edit-professional/:id" element={<EditProfessional />} />
           <Route path="professional-profile/:id" element={<ProfessionalProfile />} />
           <Route path="post-list" element={<PostList />} />
+          <Route path="post-details/:id" element={<PostDetails />} />
           <Route path="story-list" element={<StoryList />} />
           <Route path="request-list" element={<RequestList />} />
           <Route path="newsfeed-list" element={<NewsfeedList />} />
           <Route path="confirmed" element={<Confirmed />} />
           <Route path="confirmation" element={<Confirmaton />} />
           <Route path="become-pro2" element={<BecomePro2 />} />
+          <Route path="bill-info" element={<PaymentInfo />} />
         </Route>
         <Route path="*" element={<h3>Page not Found</h3>} />
       </Routes>
